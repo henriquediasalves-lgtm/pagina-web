@@ -23,25 +23,24 @@
             margin: 0 auto;
             padding: 16px;
             border: 5px solid black;
-                  }
+        }
 
-     article{
-         
-    display: flex;          
- } 
+        article {
 
-        img { 
+            display: flex;
+        }
+
+        img {
             width: 250px;
-            height: 250px; 
+            height: 250px;
 
 
         }
 
-       .autor {
-        font-weight: bold;
-        text-align: center;
-       }
-
+        .autor {
+            font-weight: bold;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -54,34 +53,63 @@
     </header>
 
     <main>
-        <img src="imagem1.jpeg" alt="imagem inicial do blog">
-        <div>
-        <h2 class= autor>por: Ricão_xtz/Meu primeiro post.</h2>
-        <p class="autor">Por: Ricão_xtz </p>
-        <p>Falou do ligeirinho e bolou o rapidinho</p>
-        <p>quer correr com tudo sem sair do mundo</p>
-        <button>👍<span>0</span></button>
-        </div>
+        <article>
+            <img src="imagem1.jpeg" alt="imagem inicial do blog">
+            <div>
+                <h2 class=autor>por: Ricão_xtz/Meu primeiro post.</h2>
+                <p class="autor">Por: Ricão_xtz </p>
+                <p>Falou do ligeirinho e bolou o rapidinho</p>
+                <p>quer correr com tudo sem sair do mundo</p>
+                <button>👍<span>0</span></button>
+                <button>💥<span>0</span></button>
+            </div>
+        </article>
+
+        <article>
+            <img src="imagem1.jpeg" alt="imagem inicial do blog">
+            <div>
+                <h2 class=autor>por: Ricão_xtz/Meu primeiro post.</h2>
+                <p class="autor">Por: Ricão_xtz </p>
+                <p>Falou do ligeirinho e bolou o rapidinho</p>
+                <p>quer correr com tudo sem sair do mundo</p>
+                <button>👍<span>0</span></button>
+                <button>💥<span>0</span></button>
+            </div>
+        </article>
+
+        <article>
+            <img src="imagem1.jpeg" alt="imagem inicial do blog">
+            <div>
+                <h2 class=autor>por: Ricão_xtz/Meu primeiro post.</h2>
+                <p class="autor">Por: Ricão_xtz </p>
+                <p>Falou do ligeirinho e bolou o rapidinho</p>
+                <p>quer correr com tudo sem sair do mundo</p>
+                <button>👍<span>0</span></button>
+                <button>💥<span>0</span></button>
+            </div>
+        </article>
     </main>
 
     <main>
         <h3>os cachorrudos da pecuária que não para</h3>
         <p>só leva tapa na cara dos tralhia</p>
-        
+
     </main>
 
 
 </body>
 
 <script>
-    const botao = document.querySelector("button");
-botao.addEventListener("click", botaoClicado);
+    const botoes = document.querySelectorAll("button");
 
-function botaoClicado () {
-console.log("fui clicado");
-let texto = botao.querySelector("span");
-texto.textContent++;
-}
+    botoes.forEach(function (botao) {
+        botao.addEventListener("click", botaoClicado);
+        function botaoClicado() {
+            console.log("fui clicado");
+            let texto = botao.querySelector("span");
+            texto.textContent++;
+        }
+    });
 </script>
 
-</html>       
+</html>
